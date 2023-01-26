@@ -127,5 +127,4 @@ Thanks to @bierbaumtim @troyanskiy @rodineijf for the contributions
 
 ## [0.1.0] - Package Release
 
-
 ## [0.0.1] - Pre Release

@@ -386,12 +386,12 @@ class _CupertinoModalTransition extends StatelessWidget {
   }
 }
 
-class CupertinoScaffoldInheirted extends InheritedWidget {
+class CupertinoScaffoldInherited extends InheritedWidget {
   final AnimationController? animation;
 
   final Radius? topRadius;
 
-  const CupertinoScaffoldInheirted({
+  const CupertinoScaffoldInherited({
     this.animation,
     required super.child,
     this.topRadius,
@@ -405,8 +405,8 @@ class CupertinoScaffoldInheirted extends InheritedWidget {
 
 // Support
 class CupertinoScaffold extends StatefulWidget {
-  static CupertinoScaffoldInheirted? of(BuildContext context) =>
-      context.dependOnInheritedWidgetOfExactType<CupertinoScaffoldInheirted>();
+  static CupertinoScaffoldInherited? of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<CupertinoScaffoldInherited>();
 
   final Widget body;
   final Radius topRadius;
@@ -491,13 +491,8 @@ class _CupertinoScaffoldState extends State<CupertinoScaffold>
   }
 
   @override
-  void dispose() {
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return CupertinoScaffoldInheirted(
+    return CupertinoScaffoldInherited(
       animation: animationController,
       topRadius: widget.topRadius,
       child: _CupertinoModalTransition(
